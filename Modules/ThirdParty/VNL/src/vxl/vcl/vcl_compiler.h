@@ -119,6 +119,19 @@
 #  else
 #   define VCL_GCC_100
 #  endif
+// credit to the github community!
+// unfortunately, I cannot remember where I got this from exactly
+# elif (__GNUC__==11)
+#  define VCL_GCC_11
+#  if (__GNUC_MINOR__ > 2 )
+#   define VCL_GCC_113
+#  elif (__GNUC_MINOR__ > 1 )
+#   define VCL_GCC_112
+#  elif (__GNUC_MINOR__ > 0 )
+#   define VCL_GCC_111
+#  else
+#   define VCL_GCC_110
+#  endif
 # else
 #  error "Dunno about this gcc"
 # endif
